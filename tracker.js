@@ -20,7 +20,7 @@ async function downloadFile() {
     const url3 = '/noftp/dayzxb/config/DayZServer_X1_x64.ADM'
     const filePath = path.resolve('./logs','serverlog.ADM');
     const writer = fs.createWriteStream(filePath);
-    const downloadLink = await axios.get(url1+/*GAMESERVER ID GOES HERE*/+url2+/*HOSTNAME GOES HERE*/+url3,{responseType: 'application/json', headers: {'Authorization': 'Bearer '+process.env.TOKEN, 'Accept': 'application/octect-stream'}});
+    const downloadLink = await axios.get(url1+/*GAMESERVER ID GOES HERE*/+url2+/*USER ID GOES HERE*/+url3,{responseType: 'application/json', headers: {'Authorization': 'Bearer '+process.env.TOKEN, 'Accept': 'application/octect-stream'}});
     const response = await axios.get(downloadLink.data.data.token.url,{responseType: 'stream', headers: {'Authorization': 'Bearer '+process.env.TOKEN, 'Accept': 'application/octect-stream'}});
     response.data.pipe(writer)
     return new Promise((resolve, reject) => {
