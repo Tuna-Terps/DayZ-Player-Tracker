@@ -7,7 +7,8 @@ const path = require('path');
 const db = mongoose.connection;
 
 /* commented */
-// create path for .env file
+
+setInterval(function(){
 config({
     path: __dirname + '/.env/'
 })
@@ -30,7 +31,7 @@ async function downloadFile() {
 }
 
 // MONGODB USERNAME GOES HERE, ALSO INCLUDE CLUSTER NAME -
-mongoose.connect('mongodb+srv://<MONGODB USERNAME HERE !>:' + process.env.MONGO + '@< CLUSTERNAME HERE ! >.j3vz9.mongodb.net/Cluster0?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,});
+mongoose.connect('mongodb+srv://<MONGODB USERNAME HERE!>:' + process.env.MONGO + '@<CLUSTERNAME HERE!>.j3vz9.mongodb.net/Cluster0?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,});
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
@@ -88,3 +89,4 @@ function auditFile () {
 });
 }
 auditFile();
+},1500000);
