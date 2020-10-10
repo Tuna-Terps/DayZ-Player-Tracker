@@ -60,6 +60,7 @@ db.once('open', function(){
                 }
                 else if (args[1] === 'start'){
                     if (!message.member.roles.cache.some(r => r.name === "Admin")) return message.channel.send('YOU DO NOT HAVE THE REQUIRED PERMISSIONS') .then (res => res.delete({ timeout: 5000, }));
+                    message.channel.send('Beginning tracker. . .');
                     console.log('Beginning tracker. . .');
                     startFeed = true;
                     setInterval(function() {
