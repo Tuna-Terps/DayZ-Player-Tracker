@@ -15,7 +15,7 @@ config({
 })
 
 // MONGODB USERNAME GOES HERE, ALSO INCLUDE CLUSTER NAME - 
-mongoose.connect(`mongodb+srv://`+`${process.env.MONGO_USER}`+`:`+`${process.env.MONGO_PW}`+'@node-rest-log-test-kwcfn.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, });
+mongoose.connect(`mongodb+srv://`+`${process.env.MONGO_USER}`+`:`+`${process.env.MONGO_PW}`+'@<clustername goes here>/<DB name goes here>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, });
                         
 db.on('error', console.error.bind(console, 'connection error:'));
                         
