@@ -125,7 +125,7 @@ db.once('open', function(){
                             });
                         });             
                     } else return;
-                    },60000);
+                    },1400000);
                 } else {
                 message.channel.send('Invalid argument....you must either start, pause or resume the tracker!');
                 console.log('**Invalid argument.... please start, resume, or stop tracker**');
