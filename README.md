@@ -16,9 +16,9 @@ This script was desgined and implemented by Tuna Terps with K1ngs of DayZ and I 
 **BOT COMMANDS**
 
 *Commands start with prefix !tracker
-\n1.) !tracker start
-\n2.) !tracker pause
-\n3.) !tracker resume
+1.) !tracker start
+2.) !tracker pause
+3.) !tracker resume
 
 *Contributions are welcome* 
 For any major changes; please open a pull request and be sure to frequently test updates. 
