@@ -58,7 +58,7 @@ db.once('open', function(){
                 if (args[1] === 'pause'){
                     if (!message.member.roles.cache.some(r => r.name === "Admin")) return message.channel.send('YOU DO NOT HAVE THE REQUIRED PERMISSIONS').then (res => res.delete({ timeout: 5000, }));
                     startFeed = false;
-                    const trackSEmbd = new MessageEmbed().setTitle(`**DayZ Player Tracker**`).setColor(0x07f1fa).attachFiles(trackSImg).attachFiles(crwn).setImage('attachment://track.png').setThumbnail('attachment://crown.png').setDescription(`Pausing the player tracker . . .`).setFooter(`Tracker PAUSE requested by member: ${message.author.tag}`, message.member.user.displayAvatarURL()).setTimestamp();
+                    const trackSEmbd = new MessageEmbed().setTitle(`**DayZ Player Tracker**`).setColor(0x0623fa).attachFiles(trackSImg).attachFiles(crwn).setImage('attachment://track.png').setThumbnail('attachment://crown.png').setDescription(`Pausing the player tracker . . .`).setFooter(`Tracker PAUSE requested by member: ${message.author.tag}`, message.member.user.displayAvatarURL()).setTimestamp();
                     message.channel.send(trackSEmbd);
                     console.log('tracker is now PAUSED. . .');
                 }
