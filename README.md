@@ -1,5 +1,7 @@
 # DayZ-Player-Tracker
 
+**Please check latest branch for all recent additions**
+
 Welcome to the DayZ Player Tracker ! 
 This is designed to read serverlogs and save players to a database; 
 This script was desgined and implemented by Tuna Terps with K1ngs of DayZ and I hope you enjoy !
