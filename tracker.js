@@ -23,7 +23,8 @@ config({
 })
 
 // MONGODB USERNAME GOES HERE, ALSO INCLUDE CLUSTER NAME - 
-mongoose.connect(`mongodb+srv://`+`${process.env.MONGO_USER}`+`:`+`${process.env.MONGO_PW}`+`${process.env.MONGO_CLUSTER}`+'.mongodb.net/'+`${process.env.MONGO_DBN}`+'?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, });
+mongoose.connect(`mongodb+srv://`+`${process.env.MONGO_USER}`+`:`+`${process.env.MONGO_PW}`+`${process.env.MONGO_CLUSTER}`+'.mongodb.net/'+`${process.env.MONGO_DBN}`+'?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, })
+.then(() => { console.log('db connect success!')})
                         
 db.on('error', console.error.bind(console, 'connection error:'));
                         
