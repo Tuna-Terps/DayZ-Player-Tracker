@@ -182,10 +182,10 @@ db.once('open', function(){
                         if (!message.member.roles.cache.some(r => r.name === 'Admin')) return message.channel.send('YOU DO NOT HAVE THE REQUIRED PERMISSIONS').then(res => res.delete({timeout: 6000,}));
                         async function servStatus(){                            
                             console.log(`. . .`)
-                            console.log(`Checking details of ${process.env.NI_testID} . . .`)
+                            console.log(`Checking details of ${process.env.NI_ID} . . .`)
                             const u5 = 'https://api.nitrado.net/services/'
                             const u6 = '/gameservers'
-                            const deetS = await axios.get(u5+`${process.env.NI_testID}`+u6,{ responseType: 'application/json',  headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`, 'Accept': 'application/json'}});
+                            const deetS = await axios.get(u5+`${process.env.NI_ID}`+u6,{ responseType: 'application/json',  headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`, 'Accept': 'application/json'}});
                             const deetEmbd = new MessageEmbed()
                             .setTitle(`**👑 DayZ Server Details 👑**`)
                             .setColor(0x08f719)
@@ -233,10 +233,10 @@ db.once('open', function(){
                     else if (args[1] === 'stop'){
                         if (!message.member.roles.cache.some(r => r.name === 'Admin')) return message.channel.send('YOU DO NOT HAVE THE REQUIRED PERMISSIONS').then(res => res.delete({timeout: 6000,}));    
                         async function servStop(){
-                            console.log(`attempting to stop server ${process.env.NI_testID} . . .`)
+                            console.log(`attempting to stop server ${process.env.NI_ID} . . .`)
                             const u7 = 'https://api.nitrado.net/services/'
                             const u9 = '/gameservers/stop'
-                            const newStop = await axios({method: 'post',url: u7+`${process.env.NI_testID}`+u9, headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`}});
+                            const newStop = await axios({method: 'post',url: u7+`${process.env.NI_ID}`+u9, headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`}});
                             const stopEmbd = new MessageEmbed()
                             .setTitle(`DayZ Server Shutdown`)
                             .setColor(0xFD1404)
