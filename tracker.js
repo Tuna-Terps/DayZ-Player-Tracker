@@ -211,10 +211,10 @@ db.once('open', function(){
                     else if (args[1] === 'restart'){
                         if (!message.member.roles.cache.some(r => r.name === 'Admin')) return message.channel.send('YOU DO NOT HAVE THE REQUIRED PERMISSIONS').then(res => res.delete({timeout: 6000,}));
                         async function servRestart(){
-                            console.log(`attempting to restart server ${process.env.NI_testID} . . .`)
+                            console.log(`attempting to restart server ${process.env.NI_ID} . . .`)
                             const u7 = 'https://api.nitrado.net/services/'
                             const u8 = '/gameservers/restart'
-                            const newStart = await axios({method: 'post',url: u7+`${process.env.NI_testID}`+u8,headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`}});
+                            const newStart = await axios({method: 'post',url: u7+`${process.env.NI_ID}`+u8,headers: {'Authorization' : 'Bearer '+`${process.env.NI_ADM}`}});
                             const resetEmbd = new MessageEmbed()
                             .setTitle(`DayZ Server Restart`)
                             .setColor(0xfc7d01)
