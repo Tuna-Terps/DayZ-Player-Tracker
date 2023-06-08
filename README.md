@@ -18,4 +18,4 @@ This script was desgined and implemented by Tuna Terps with K1ngs of DayZ and I 
 *Contributions are welcome* <br>
 For any major changes; please open a pull request and be sure to frequently test updates. <br>
 <br>
-Thanks again !
+Thanks again  !
